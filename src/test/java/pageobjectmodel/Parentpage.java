@@ -8,7 +8,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-import browsersfactory.Browsers;
+import Browsers.Browsers;
 
 public class Parentpage {
 	WebDriver driver;
@@ -27,7 +27,7 @@ public class Parentpage {
 	// Generic method for opening browsers
 	public void OpenWebBrowser(String browserName) {
 		browser = new Browsers();
-		browser.OpenBrowser(browserName);
+		browser.OpenMyBrowser(browserName);
 	}
 
 	//// Generic methods for clicking webelements.
