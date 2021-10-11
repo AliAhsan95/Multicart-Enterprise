@@ -1,12 +1,13 @@
 package stepscodedefinition;
 
 import Browsers.Browsers;
+import pageobjectmodel.Homepage;
 
 public class StepscodeHelper {
 
  StepscodeHelper	helper;
 	Browsers browser;
-	
+	Homepage home;
 	
 	public Browsers GetBrowser() {
 		if (browser == null) {
@@ -17,7 +18,17 @@ public class StepscodeHelper {
 		
 	}
 	
+	public Homepage GetHomepage() {
+		if (home == null) {
+			home= new Homepage(browser.driver);
+		}
+		
+		return home;
+		
+	}
 
 
+	
+	
 
 }

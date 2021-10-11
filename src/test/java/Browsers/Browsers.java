@@ -1,28 +1,35 @@
 package Browsers;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class Browsers {
+
+	public WebDriver driver;
 	
-	WebDriver driver;
-	Browsers browser;
+
 	public void OpenMyBrowser(String browserName) {
-		if(browserName.equals("chrome")) {
-		WebDriverManager.chromedriver().setup();
-		driver.manage().window().maximize();
-		} else if(browserName.equals("firefox")){
+		browserName.toLowerCase();
+		if (browserName.equals("chrome".toLowerCase())) {
+			WebDriverManager.chromedriver().setup();
+			driver = new ChromeDriver();
+
+		} else if (browserName.equals("firefox".toLowerCase())) {
 			WebDriverManager.firefoxdriver().setup();
-			driver.manage().window().maximize();
+			driver = new FirefoxDriver();
+
 		}
-	}
-	
-	public void NavegettoWebpageUrl(String WebpageUrl) {
-		driver.get(WebpageUrl);
+		driver.manage().deleteAllCookies();
+		driver.manage().window().maximize();
 		
 	}
-	
-	
+
+	public void NavegettoWebpageUrl(String WebpageUrl) {
+		driver.get(WebpageUrl);
+
+	}
 
 }
