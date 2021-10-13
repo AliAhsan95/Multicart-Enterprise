@@ -2,12 +2,14 @@ package stepscodedefinition;
 
 import Browsers.Browsers;
 import pageobjectmodel.Homepage;
+import pageobjectmodel.VandorsSignupPage;
 
 public class StepscodeHelper {
 
  StepscodeHelper	helper;
 	Browsers browser;
 	Homepage home;
+	VandorsSignupPage vandor;
 	
 	public Browsers GetBrowser() {
 		if (browser == null) {
@@ -26,6 +28,13 @@ public class StepscodeHelper {
 		return home;
 		
 	}
+	public VandorsSignupPage GetVandorsSignupPage() {
+		if(vandor==null) {
+			vandor=new VandorsSignupPage(browser.driver);
+		}
+		return vandor;
+	}
+	
 
 
 	

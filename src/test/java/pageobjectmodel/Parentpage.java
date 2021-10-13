@@ -81,7 +81,7 @@ public class Parentpage {
 	// Generic methods to get text from webelements.
 
 	public String GetTextFromWebElementById(String locators) {
-		JavaWait(500);
+		JavaWait(1000);
 		WebElement element = driver.findElement(By.id(locators));
 		HighlightElementBorderAndBackground(element, "pass");
 		return element.getText().toLowerCase();
@@ -103,7 +103,7 @@ public class Parentpage {
 
 	//// Generic method for getting Webelements Text
 	public List<WebElement> GetWebElementsByXpath(String locators) {
-JavaWait(500);
+		JavaWait(500);
 
 
 		return driver.findElements(By.xpath(locators));
@@ -154,8 +154,8 @@ JavaWait(500);
 		}
 
 	}
-	
-	
+
+
 	public void JavaWait(int mils) {
 		try {
 			Thread.sleep(mils);
@@ -165,8 +165,8 @@ JavaWait(500);
 		}
 	}
 
-	
 
-	
+
+
 
 }
