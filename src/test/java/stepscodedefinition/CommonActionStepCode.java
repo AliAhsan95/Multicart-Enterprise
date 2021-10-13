@@ -22,6 +22,14 @@ public class CommonActionStepCode {
 	  if (elementName.equals("Affiliates link".toLowerCase())) {
 		  
 	  }
+	  /// for vandors link
+	  else if(elementName.equals("VENDORS link".toLowerCase().trim())) {
+		  helper.GetVandorsSignupPage().ClickVndorLink();
+	  }else if(elementName.equals("Register now link".toLowerCase().trim())) {
+		  helper.GetVandorsSignupPage().ClickVndorRegisterLink();
+	  }else if(elementName.equals("Select button".toLowerCase().trim())) {
+		  helper.GetVandorsSignupPage().ClickSlectButton();
+	  }
 	}
 	
 
