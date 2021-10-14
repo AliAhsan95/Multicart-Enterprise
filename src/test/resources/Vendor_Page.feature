@@ -12,8 +12,8 @@ Feature: Register Affiliates Account Mechanism
   #Scenario: Successfully Land on Register Page
     #When I Click "VENDORS link"
     #And I Click "Register now link"
-     #Then I Land on "MultiCart Enterprise" and expect Title text as "Vendor Login"
-     #And I expect"ALL title " text as
+    #Then I Land on "MultiCart Enterprise" and expect Title text as "Vendor Login"
+    #And I expect"ALL title " text as
     #And I Click "Select button"
     #
     
