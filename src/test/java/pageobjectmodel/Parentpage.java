@@ -44,7 +44,6 @@ public class Parentpage {
 
 		JavaWait(1000);
 
-
 		driver.findElement(By.xpath(locators)).click();
 
 	}
@@ -109,7 +108,6 @@ public class Parentpage {
 	public List<WebElement> GetWebElementsByXpath(String locators) {
 		JavaWait(500);
 
-
 		return driver.findElements(By.xpath(locators));
 	}
 
@@ -159,7 +157,6 @@ public class Parentpage {
 
 	}
 
-
 	public void JavaWait(int mils) {
 		try {
 			Thread.sleep(mils);
@@ -168,9 +165,5 @@ public class Parentpage {
 			e.printStackTrace();
 		}
 	}
-
-
-
-
 
 }

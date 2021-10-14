@@ -20,13 +20,11 @@ public void Rampup() {
 
 @After
 public void TearDown() {
-	//JavaWait(2000);
+	
 	
 	helper.GetHomepage().JavaWait(2000);
 	helper.GetBrowser().driver.close();
-	
 }
-
 
 
 
