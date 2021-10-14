@@ -24,5 +24,3 @@ Feature: Register Affiliates Account Mechanism
     #Scenario: Sucessfully creation account for a new user
     #When I Click "VENDORS link"
     #And I Click "Register now link"
-     #And I Click "Select button"
-    #And I complete registation form for a new user firstname "mr hasan" and lastname "generatenew" 

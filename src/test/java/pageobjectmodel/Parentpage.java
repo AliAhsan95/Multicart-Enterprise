@@ -18,7 +18,7 @@ public class Parentpage {
 
 	}
 
-	/// Global veriable
+	/// Global Variable
 	public static String random;
 
 	Browsers browser;
@@ -30,7 +30,7 @@ public class Parentpage {
 		browser.OpenMyBrowser(browserName);
 	}
 
-	//// Generic methods for clicking webelements.
+	//// Generic methods for clicking WebElements.
 
 	public void ClickWebElementById(String locators) {
 		JavaWait(500);
@@ -41,8 +41,10 @@ public class Parentpage {
 	}
 
 	public void ClickWebElementByXpath(String locators) {
-		
-		
+
+		JavaWait(1000);
+
+
 		driver.findElement(By.xpath(locators)).click();
 
 	}
@@ -91,7 +93,7 @@ public class Parentpage {
 	}
 
 	public String GetTextFromWebElementByXpath(String locators) {
-		JavaWait(1000);
+		JavaWait(2000);
 		WebElement element = driver.findElement(By.xpath(locators));
 		HighlightElementBorderAndBackground(element, "pass");
 

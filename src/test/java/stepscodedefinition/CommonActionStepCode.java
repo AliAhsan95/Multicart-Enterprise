@@ -22,18 +22,22 @@ public class CommonActionStepCode {
 	  if (elementName.equals("Affiliates link".toLowerCase())) {
 		  
 	  }
-	  /// for vandors link
+	  /// for vendors link
 	  else if(elementName.equals("VENDORS link".toLowerCase().trim())) {
 		  helper.GetVandorsSignupPage().ClickVndorLink();
+	  ///  
 	  }else if(elementName.equals("Register now link".toLowerCase().trim())) {
 		  helper.GetVandorsSignupPage().ClickVndorRegisterLink();
 	  }else if(elementName.equals("Select button".toLowerCase().trim())) {
 		  helper.GetVandorsSignupPage().ClickSlectButton();
+	  }else if (elementName.equals("Resellers Link".toLowerCase().trim())) {
+		  helper.GetReseller_RegisterPage().ClickResellersLink();
+	  }else if (elementName.equals("Free Reseller Membership Select Button".trim().toLowerCase())) {
+		  helper.GetReseller_RegisterPage().ClickFreeResellerMembershipSelectButton();
 	  }
+	
+	
+	
 	}
-	
-
-	
-
 
 }
