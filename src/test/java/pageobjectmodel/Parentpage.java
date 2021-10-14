@@ -41,6 +41,8 @@ public class Parentpage {
 	}
 
 	public void ClickWebElementByXpath(String locators) {
+		
+		
 		driver.findElement(By.xpath(locators)).click();
 
 	}
