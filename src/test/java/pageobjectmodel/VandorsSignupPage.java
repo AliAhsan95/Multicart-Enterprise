@@ -3,9 +3,12 @@ package pageobjectmodel;
 
 
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 
 public class VandorsSignupPage extends Parentpage{
 
@@ -17,12 +20,13 @@ public class VandorsSignupPage extends Parentpage{
 	String vandorlink = "//i[@class='fa fa-user icn-fo']";
 	String vandorpage = "//h2[@class='text-center']";
 	String registerlink ="//a[@class='textlink2']";
-	String selectbutton ="//input[@type='button']";
-	
+	String selectbutton ="//tbody//tr[3]/td/input";
 	String usernamefield="//input[@type='text']";
-	
-	
-	
+	//String alloption = "//div[@class='col-md-3 no-padding']";
+	//String alloption = "navMenu";
+	String alloption = "//div[@align='left']/a";
+	String vandorplan ="/html/body/div[4]/div/div/div[2]/form/div/table/tbody/tr[1]/th";
+	//tbody/tr[5]/td/input
 	
 	
 	
@@ -117,12 +121,57 @@ public class VandorsSignupPage extends Parentpage{
 
 
 
+
+
+	public List<String> GetToKnowUsOptionsFromUi() {
+		// TODO Auto-generated method stub
+		List<String> resultList = new ArrayList<String>();
+		List<WebElement> actualList = GetWebElementsByXpath(alloption);
+		for(int i=0; i <actualList.size();i++) {
+			//System.out.println(actualList.get(i).getText());
+			resultList.add(actualList.get(i).getText());
+			
+		}
+		
+		
+		return resultList;
+		
+	}
+
+
+
+
+
+
+	public String GetActualVandorstitleText() {
+		// TODO Auto-generated method stub
+		return GetTextFromWebElementByXpath(vandorplan);
+	}
+
+
+
+
+	
+//public List<String> GetToKnowUsOptionsFromUI() {
+//		
+//		
+//		List<String> resultList = new ArrayList<String>();
+//		List<WebElement> actualList = GetWebElementsByXpath(gettoknowus);
+//		for(int i=0; i <actualList.size();i++) {
+//			//System.out.println(actualList.get(i).getText());
+//			resultList.add(actualList.get(i).getText());
+//		}
+//	public String GetActualErrorText() {
+//		String actualErrorText = GetTextFromWebElementByXpath(errortext);
+//		
+//		actualErrorText=actualErrorText.replace("\n", "");
+//		actualErrorText=actualErrorText.trim();
+//		
+//		return actualErrorText;
+//	}
 	
 	
-	
-	
-	
-	
+	}
 	
 
-}
+	
